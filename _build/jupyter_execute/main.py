@@ -265,7 +265,7 @@ from IPython.display import Image
 # In[11]:
 
 
-# Error decomposition plot
+Image(filename = "figures/error_pt_lvl.png", width=1000, height=1000)
 
 
 # ## Results: Grid-Level Analysis
