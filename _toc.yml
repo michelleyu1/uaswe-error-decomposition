@@ -6,6 +6,9 @@ root: main
 parts:
 - caption: Analysis
   chapters: 
-  - file: markdown
-  - file: notebooks
-  - file: markdown-notebooks
+  - file: analysis/ua_swe_reconstruct
+  - file: analysis/sensitivity_analysis
+  - file: analysis/error_decomposition
+  # - file: markdown
+  # - file: notebooks
+  # - file: markdown-notebooks
