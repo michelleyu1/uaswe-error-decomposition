@@ -240,7 +240,7 @@ from IPython.display import Image
 # In[9]:
 
 
-# ANOVA summary plot
+Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 
 
 # ### Error Decomposition
