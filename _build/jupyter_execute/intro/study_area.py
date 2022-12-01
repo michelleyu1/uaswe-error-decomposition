@@ -48,7 +48,7 @@ gm_poly_geom = gm_poly_gdf.iloc[0].geometry
 # In[ ]:
 
 
-f, ax = plt.subplots(figsize=(8,8))
+f, ax = plt.subplots(figsize=(6,8))
 gm_poly_gdf.plot(ax=ax, facecolor="none", edgecolor='black', lw=2.5)
 # gm_snotel_sites.plot(ax=ax, column='elevation_m', markersize=100, edgecolor='k', cmap='inferno', legend=True, legend_kwds={'label':'Elevation (m)'})
 ctx.add_basemap(ax=ax, crs=gm_poly_gdf.crs,source=ctx.providers.Stamen.Terrain)    # add/plot basemap
