@@ -102,6 +102,7 @@ Image(filename = "figures/annual_cycle.png", width=1000, height=1000)
 
 
 # Figure of UCRB map
+Image(filename = "figures/ucrb.png", width=1000, height=1000)
 
 
 # ## Data
