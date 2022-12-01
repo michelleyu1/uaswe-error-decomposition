@@ -4,9 +4,9 @@
 format: jb-book
 root: main
 parts:
-- caption: 
+- caption: Background
   chapters:
-  - file: intro/ucrb
+  - file: intro/study_area
 - caption: Analysis
   chapters: 
   - file: analysis/ua_swe_reconstruct
