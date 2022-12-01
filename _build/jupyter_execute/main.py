@@ -57,21 +57,28 @@ Image(filename = "figures/annual_cycle.png", width=1000, height=1000)
 
 # Some commonly used SWE gridded products include:
 # * **Livneh**
-# One-sentence description of generating method: Interpolate and scale precipitation and temperature observations and then feed the processed precipitation and temperature data as well as wind data into a land surface model. 
+# Interpolate and scale precipitation and temperature observations and then feed the processed precipitation and temperature data as well as wind data into a land surface model. 
 # ~6km spatial resolution, spanning Mexico, CONUS, and South Canada.
 # Daily time scale, 1985-2013 [1985-2020 for L21]
 # * **UofA**
-# One-sentence description of generating method: Scale interpolate scaled SWE observations with temperature and precipitation data.
+# Scale interpolate scaled SWE observations with temperature and precipitation data.
 # 4km spatial resolution, spanning CONUS.
 # Daily time scale, 1982-2016
 # * **ERA5**
-# One-sentence description of generating method: Feeds into a land surface model many sources of satellite and in-situ data 
+# Feeds into a land surface model many sources of satellite and in-situ data 
 # 31km spatial resolution, spanning North America.
 # Hourly time scale, with daily update, 1979-2014
 # * **UCLA WUS SR**
-# One-sentence description of generating method: Bayesian reanalysis
+# Bayesian reanalysis
 # 90m spatial resolution, spanning the Western US
 # Daily time scale, 1985-2019
+
+# In[3]:
+
+
+# Figure of SWE gridded products
+Image(filename = "figures/swe_products.png", width=1000, height=1000)
+
 
 # Gridded products are immensely useful; however, there still exist limitations. First, many methods, such as Livneh and UA SWE, that utilize point measurements include some kind of smoothing or interpolation in the gridding process. These assumptions add additional uncertainty, at times up to 60% of differences observed in estimates of Western US wide peak SWE (Siirla, Rhoades, et al. (2019)). Furthermore, methods, such as Livneh and ERA5, utilize a physical model in the gridding procedure. The use of such models also adds uncertainty and error to the final estimates. Additionally, spatial variability in SWE due to topographic and land cover heterogeneity cannot be adequately captured by data with relatively coarse spatial resolution. Related to the relatively coarse spatial resolution, another limitation lies in the limited ability of gridded products to estimate extremes.  
 
@@ -81,7 +88,7 @@ Image(filename = "figures/annual_cycle.png", width=1000, height=1000)
 # 
 # Specifically, we organize the study as follows: first, we reconstruct the UA SWE algorithm from scratch, as the code is not ready to be made publicly available, then we conduct a sensitivity analysis on the UA SWE product to understand the relative importance of major components in UA SWE, and finally we develop a error decomposition to quantify the amount of error attributed by each of the major components in UA SWE.
 
-# In[3]:
+# In[ ]:
 
 
 # Mathematical formulation of objective
@@ -98,7 +105,7 @@ Image(filename = "figures/annual_cycle.png", width=1000, height=1000)
 # The river's natural flow is highly influenced by snowpack in the Rocky Mountain headwaters subbasins, which account for over 70% of the river's annual streamflow (Li et al. (2017), Xiao et al. (2021))
 # 2) Several data collection campaigns have been launched in recent years in various parts of the UCRB, specifically the DOE SAIL and SPLASH campaigns that provide high quality state-of-the-art observation temperature and precipitation data that we hope to leverage in the future, as well as the ASO data mentioned previously that produce fine-grain data in certain watersheds within the UCRB.
 
-# In[4]:
+# In[ ]:
 
 
 # Figure of UCRB map
@@ -109,7 +116,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 
 # The UA SWE product combines **SNOTEL** in-situ temperature, precipitation, and SWE data, with **PRISM** gridded temperature and precipitation data to produce gridded SWE estimates at daily 4km x 4km resolution.
 
-# In[5]:
+# In[ ]:
 
 
 # Plot of SNOTEL and PRISM for the UCRB
@@ -120,7 +127,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # * **Livneh**
 # * **Jennings**
 
-# In[6]:
+# In[ ]:
 
 
 # Plots of PRISM/Gridmet/Livneh and Jennings
@@ -175,7 +182,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 
 # In words, the UA SWE product estimates SWE by 
 
-# In[7]:
+# In[ ]:
 
 
 # Some plots of reconstrcted UA SWE
@@ -205,7 +212,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # |  | Inverse Distance Weighting (IDW) | 
 # |  | Ordinary Kriging with Nonzero Nugget (OK+n) | 
 
-# In[8]:
+# In[ ]:
 
 
 # plots from runs
@@ -239,7 +246,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # \end{align}
 # $$
 
-# In[9]:
+# In[ ]:
 
 
 Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
@@ -251,7 +258,7 @@ Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 # 
 # This is illustrated in the figure below. 
 
-# In[10]:
+# In[ ]:
 
 
 # Error decomposition steps plot
@@ -264,7 +271,7 @@ Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 # $$
 # 
 
-# In[11]:
+# In[ ]:
 
 
 Image(filename = "figures/error_pt_lvl.png", width=1000, height=1000)
