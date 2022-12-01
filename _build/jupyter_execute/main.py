@@ -31,6 +31,7 @@ from IPython.display import Image
 
 
 # Figure of SWE annual cycle 
+Image(filename = "figures/annual_cycle.png", width=1000, height=1000)
 
 
 # ### SWE Datasets
