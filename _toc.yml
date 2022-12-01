@@ -6,6 +6,7 @@ root: main
 parts:
 - caption: Background
   chapters:
+  - file: intro/swe_products
   - file: intro/study_area
 - caption: Analysis
   chapters: 

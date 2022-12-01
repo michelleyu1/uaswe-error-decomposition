@@ -88,7 +88,7 @@ Image(filename = "figures/swe_products.png", width=1000, height=1000)
 # 
 # Specifically, we organize the study as follows: first, we reconstruct the UA SWE algorithm from scratch, as the code is not ready to be made publicly available, then we conduct a sensitivity analysis on the UA SWE product to understand the relative importance of major components in UA SWE, and finally we develop a error decomposition to quantify the amount of error attributed by each of the major components in UA SWE.
 
-# In[ ]:
+# In[4]:
 
 
 # Mathematical formulation of objective
@@ -105,7 +105,7 @@ Image(filename = "figures/swe_products.png", width=1000, height=1000)
 # The river's natural flow is highly influenced by snowpack in the Rocky Mountain headwaters subbasins, which account for over 70% of the river's annual streamflow (Li et al. (2017), Xiao et al. (2021))
 # 2) Several data collection campaigns have been launched in recent years in various parts of the UCRB, specifically the DOE SAIL and SPLASH campaigns that provide high quality state-of-the-art observation temperature and precipitation data that we hope to leverage in the future, as well as the ASO data mentioned previously that produce fine-grain data in certain watersheds within the UCRB.
 
-# In[ ]:
+# In[5]:
 
 
 # Figure of UCRB map
@@ -116,7 +116,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 
 # The UA SWE product combines **SNOTEL** in-situ temperature, precipitation, and SWE data, with **PRISM** gridded temperature and precipitation data to produce gridded SWE estimates at daily 4km x 4km resolution.
 
-# In[ ]:
+# In[6]:
 
 
 # Plot of SNOTEL and PRISM for the UCRB
@@ -127,7 +127,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # * **Livneh**
 # * **Jennings**
 
-# In[ ]:
+# In[7]:
 
 
 # Plots of PRISM/Gridmet/Livneh and Jennings
@@ -182,7 +182,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 
 # In words, the UA SWE product estimates SWE by 
 
-# In[ ]:
+# In[8]:
 
 
 # Some plots of reconstrcted UA SWE
@@ -212,7 +212,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # |  | Inverse Distance Weighting (IDW) | 
 # |  | Ordinary Kriging with Nonzero Nugget (OK+n) | 
 
-# In[ ]:
+# In[9]:
 
 
 # plots from runs
@@ -246,7 +246,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # \end{align}
 # $$
 
-# In[ ]:
+# In[10]:
 
 
 Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
@@ -258,7 +258,7 @@ Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 # 
 # This is illustrated in the figure below. 
 
-# In[ ]:
+# In[11]:
 
 
 # Error decomposition steps plot
@@ -271,7 +271,7 @@ Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 # $$
 # 
 
-# In[ ]:
+# In[12]:
 
 
 Image(filename = "figures/error_pt_lvl.png", width=1000, height=1000)

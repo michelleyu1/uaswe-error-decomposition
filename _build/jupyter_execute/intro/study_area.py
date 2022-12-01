@@ -28,7 +28,7 @@ save_dir = '/global/cfs/cdirs/dasrepo/yum/swe/uaswe-error-decomposition/figures/
 
 
 # Get shapefile for Upper Colorado Riber Basin (UCRB)
-uc_shp = "/global/cscratch1/sd/yum/swe/Upper_Colorado_River_Basin_Boundary/Upper_Colorado_River_Basin_Boundary.shp"
+uc_shp = "../data/Upper_Colorado_River_Basin_Boundary/Upper_Colorado_River_Basin_Boundary.shp"
 
 # Read UCRB shapefile
 gm_poly_gdf = gpd.read_file(uc_shp, encoding="utf-8")
@@ -57,7 +57,7 @@ ax.set_title('Study Area: \n Upper Colorado River Basin (UCRB)', fontsize=21)
 plt.xticks(fontsize=16)
 plt.yticks(fontsize=16)
 plt.tight_layout()
-plt.savefig(save_dir+'ucrb.png', dpi=300)
+# plt.savefig(save_dir+'ucrb.png', dpi=300)
 
 
 # In[ ]:

@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="UA SWE Product Reconstruction" href="../analysis/ua_swe_reconstruct.html" />
-    <link rel="prev" title="Decomposing Errors in Gridded Snow Water Equivalent Products in the Upper Colorado River Basin" href="../main.html" />
+    <link rel="prev" title="SWE Gridded Products" href="swe_products.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,6 +119,11 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="swe_products.html">
+   SWE Gridded Products
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Study Area
@@ -456,7 +461,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get shapefile for Upper Colorado Riber Basin (UCRB)</span>
-<span class="n">uc_shp</span> <span class="o">=</span> <span class="s2">&quot;/global/cscratch1/sd/yum/swe/Upper_Colorado_River_Basin_Boundary/Upper_Colorado_River_Basin_Boundary.shp&quot;</span>
+<span class="n">uc_shp</span> <span class="o">=</span> <span class="s2">&quot;../data/Upper_Colorado_River_Basin_Boundary/Upper_Colorado_River_Basin_Boundary.shp&quot;</span>
 
 <span class="c1"># Read UCRB shapefile</span>
 <span class="n">gm_poly_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">uc_shp</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
@@ -487,7 +492,7 @@ title="Print to PDF"
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_dir</span><span class="o">+</span><span class="s1">&#39;ucrb.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="c1"># plt.savefig(save_dir+&#39;ucrb.png&#39;, dpi=300)</span>
 </pre></div>
 </div>
 </div>
@@ -523,11 +528,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../main.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="swe_products.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Decomposing Errors in Gridded Snow Water Equivalent Products in the Upper Colorado River Basin</p>
+            <p class="prev-next-title">SWE Gridded Products</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../analysis/ua_swe_reconstruct.html" title="next page">
