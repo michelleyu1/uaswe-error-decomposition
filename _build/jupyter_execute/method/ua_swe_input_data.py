@@ -20,7 +20,7 @@ import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 
 
-# In[ ]:
+# In[2]:
 
 
 # Date range for analysis
@@ -28,13 +28,19 @@ start_date = datetime(1985,10,1)
 end_date = datetime(2016,9,30)
 
 
-# In[ ]:
+# In[3]:
 
 
 n_yrs = end_date.year - start_date.year
 
 
-# In[ ]:
+# In[18]:
+
+
+apr1_idx = 90    # apr 1 is 90th day of year
+
+
+# In[4]:
 
 
 sites_df_dir = '/global/cfs/cdirs/dasrepo/yum/swe/UofA_bias_decomposition/'
@@ -53,20 +59,20 @@ save_dir = '/global/cfs/cdirs/dasrepo/yum/swe/uaswe-error-decomposition/figures/
 
 # ## Load SNOTEL Sites
 
-# In[ ]:
+# In[5]:
 
 
 # Load list of SNOTEL sites with available data
 sites_df = pd.read_csv(sites_df_dir+"sites_df.csv", index_col='Unnamed: 0')
 
 
-# In[ ]:
+# In[6]:
 
 
 sites_df['geometry'] = sites_df['geometry'].apply(wkt.loads)
 
 
-# In[ ]:
+# In[7]:
 
 
 # Convert to a Geopandas gdf
@@ -79,7 +85,7 @@ sites_gdf = gpd.GeoDataFrame(sites_df, crs='EPSG:4326')
 
 
 
-# In[ ]:
+# In[8]:
 
 
 # Get shapefile for Upper Colorado Riber Basin (UCRB)
@@ -98,7 +104,7 @@ sites_idx = sites_gdf.intersects(gm_poly_geom)
 gm_snotel_sites = sites_gdf.loc[sites_idx]
 
 
-# In[ ]:
+# In[9]:
 
 
 gm_snotel_sites
@@ -112,7 +118,7 @@ gm_snotel_sites
 
 # ## Plot SNOTEL (SWE, P, T)
 
-# In[ ]:
+# In[10]:
 
 
 # add columns
@@ -121,13 +127,7 @@ apr1_pr = []
 apr1_temp = []
 
 
-# In[ ]:
-
-
-apr1_idx = 90    # apr 1 is 90th day of year
-
-
-# In[ ]:
+# In[12]:
 
 
 for idx, row in gm_snotel_sites.iterrows():
@@ -166,7 +166,7 @@ for idx, row in gm_snotel_sites.iterrows():
     # break
 
 
-# In[ ]:
+# In[13]:
 
 
 gm_snotel_sites['apr1_swe'] = apr1_swe
@@ -218,7 +218,7 @@ ax.set_title('SNOTEL Temperature (degC)')
 
 # ## Plot PRISM (P, T)
 
-# In[ ]:
+# In[14]:
 
 
 # Get UCRB bounds
@@ -227,7 +227,7 @@ xmin, xmax = float(np.min(xx)), float(np.max(xx))
 ymin, ymax = float(np.min(yy)), float(np.max(yy))
 
 
-# In[ ]:
+# In[15]:
 
 
 for filename in sorted(os.listdir(prism_data_dir)):
@@ -271,13 +271,13 @@ for filename in sorted(os.listdir(prism_data_dir)):
                 # prism_temp_ucrb_sum += prism_temp_ucrb_da.sum(dim=['time'])
 
 
-# In[ ]:
+# In[16]:
 
 
 prism_pr_ucrb_mean = prism_pr_ucrb_sum / n_yrs
 
 
-# In[ ]:
+# In[17]:
 
 
 prism_temp_ucrb_mean = prism_temp_ucrb_sum / n_yrs
@@ -313,20 +313,20 @@ plt.title('PRISM Temperature (degC)')
 
 # ## Plot SNOTEL and PRISM on Common Figure
 
-# In[ ]:
+# In[19]:
 
 
 min_pr, max_pr = min(np.nanmin(gm_snotel_sites['apr1_pr']), np.min(prism_pr_ucrb_mean)), max(np.nanmax(gm_snotel_sites['apr1_pr']), np.max(prism_pr_ucrb_mean))
 min_temp, max_temp = min(np.nanmin(gm_snotel_sites['apr1_temp']), np.min(prism_temp_ucrb_mean)).item(), max(np.nanmax(gm_snotel_sites['apr1_temp']), np.max(prism_temp_ucrb_mean)).item()
 
 
-# In[ ]:
+# In[20]:
 
 
 print(min_pr, max_pr, min_temp, max_temp)
 
 
-# In[ ]:
+# In[30]:
 
 
 # Average Apr 1 SNOTEL SWE
@@ -353,7 +353,8 @@ axes[0,2].set_title('SNOTEL TEMP (degC)', fontsize=16)
 axes[1,1].set_title('PRISM PR (mm)', fontsize=16)
 axes[1,2].set_title('PRISM TEMP (degC)', fontsize=16)
 plt.suptitle('UA SWE Data Sources \n (April 1 SWE, PR, TEMP averaged over years for each location)', fontsize=22)
-plt.subplots_adjust(top=0.9)
+# plt.subplots_adjust(top=0.9)
+plt.subplots_adjust(left = 0.02, top = 0.9, right = 0.98, bottom = 0.05, hspace = 0.1, wspace = 0.1)
 # plt.tight_layout()
 plt.savefig(save_dir+'ua_swe_input_data.png', dpi=300)
 
