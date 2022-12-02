@@ -8,9 +8,13 @@ parts:
   chapters:
   - file: intro/swe_products
   - file: intro/study_area
+- caption: Method
+  chapters:
+  - file: method/ua_swe_input_data   # data used in ua_swe
+  - file: method/ua_swe_reconstruct
+  # - file: method/decomposition_data   # decomposition setup - different datasets to substitute
 - caption: Analysis
   chapters: 
-  - file: analysis/ua_swe_reconstruct
   - file: analysis/sensitivity_analysis
   - file: analysis/error_decomposition
   # - file: markdown

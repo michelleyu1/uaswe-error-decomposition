@@ -108,8 +108,8 @@ Image(filename = "figures/swe_products.png", width=1000, height=1000)
 # In[5]:
 
 
-# Figure of UCRB map
-Image(filename = "figures/ucrb.png", width=1000, height=1000)
+# Map of UCRB
+Image(filename = "figures/ucrb.png", width=500, height=500)
 
 
 # ## Data
@@ -120,6 +120,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 
 
 # Plot of SNOTEL and PRISM for the UCRB
+Image(filename = "figures/ua_swe_input_data.png", width=1000, height=1000)
 
 
 # In our error analysis, we also take advantage of the following datasets:
@@ -249,6 +250,7 @@ Image(filename = "figures/ucrb.png", width=1000, height=1000)
 # In[10]:
 
 
+# Point-level ANOVA result
 Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 
 

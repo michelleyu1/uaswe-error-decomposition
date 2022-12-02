@@ -376,12 +376,11 @@ plt.ylim(35.5,43.5)
 # plt.savefig(save_dir+'log_ua_ucrb.png', dpi=300)
 
 
-# #### All Together
+# #### All Products on Single Figure
 
 # In[ ]:
 
 
-# plot era5 clipped to ucrb region
 f, axes = plt.subplots(nrows=2, ncols=2, figsize=(10,12))
 log_era5_ucrb.plot(ax=axes[0,0], cmap='coolwarm', vmin=-4, vmax=4, cbar_kwargs={'label':'log SWE (mm)'})
 log_livneh_ucrb.plot(ax=axes[0,1], cmap='coolwarm', vmin=-4, vmax=4, cbar_kwargs={'label':'log SWE (mm)'})
