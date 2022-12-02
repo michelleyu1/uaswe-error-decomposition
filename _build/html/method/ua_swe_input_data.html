@@ -717,7 +717,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">gm_snotel_sites</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    <span class="c1"># print(idx)</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">sntl_data_dir</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;_concise.csv&#39;</span><span class="p">):</span>    <span class="c1"># if file exists</span>
         <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sntl_data_dir</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;_concise.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">)</span>
         <span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>
@@ -750,145 +750,6 @@ title="Print to PDF"
         <span class="n">apr1_pr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
         <span class="n">apr1_temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
     <span class="c1"># break</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SNOTEL:1030_CO_SNTL
-SNOTEL:305_CO_SNTL
-SNOTEL:8082_UT_SNTL
-SNOTEL:317_WY_SNTL
-SNOTEL:1061_CO_SNTL
-SNOTEL:1041_CO_SNTL
-SNOTEL:1143_AZ_SNTL
-SNOTEL:342_WY_SNTL
-SNOTEL:345_CO_SNTL
-SNOTEL:348_UT_SNTL
-SNOTEL:1185_CO_SNTL
-SNOTEL:1162_UT_SNTL
-SNOTEL:353_WY_SNTL
-SNOTEL:368_UT_SNTL
-SNOTEL:371_UT_SNTL
-SNOTEL:1192_UT_SNTL
-SNOTEL:1153_UT_SNTL
-SNOTEL:913_CO_SNTL
-SNOTEL:378_CO_SNTL
-SNOTEL:380_CO_SNTL
-SNOTEL:383_UT_SNTL
-SNOTEL:386_CO_SNTL
-SNOTEL:387_CO_SNTL
-SNOTEL:247_CO_SNTL
-SNOTEL:1101_CO_SNTL
-SNOTEL:396_UT_SNTL
-SNOTEL:409_CO_SNTL
-SNOTEL:904_CO_SNTL
-SNOTEL:415_CO_SNTL
-SNOTEL:1236_UT_SNTL
-SNOTEL:426_CO_SNTL
-SNOTEL:432_UT_SNTL
-SNOTEL:435_UT_SNTL
-SNOTEL:444_UT_SNTL
-SNOTEL:449_WY_SNTL
-SNOTEL:452_UT_SNTL
-SNOTEL:457_CO_SNTL
-SNOTEL:461_UT_SNTL
-SNOTEL:1163_UT_SNTL
-SNOTEL:465_CO_SNTL
-SNOTEL:467_CO_SNTL
-SNOTEL:468_WY_SNTL
-SNOTEL:1252_CO_SNTL
-SNOTEL:1120_CO_SNTL
-SNOTEL:1149_UT_SNTL
-SNOTEL:481_UT_SNTL
-SNOTEL:1186_CO_SNTL
-SNOTEL:505_CO_SNTL
-SNOTEL:248_CO_SNTL
-SNOTEL:509_WY_SNTL
-SNOTEL:521_UT_SNTL
-SNOTEL:522_UT_SNTL
-SNOTEL:1187_CO_SNTL
-SNOTEL:528_UT_SNTL
-SNOTEL:538_CO_SNTL
-SNOTEL:542_CO_SNTL
-SNOTEL:543_UT_SNTL
-SNOTEL:544_WY_SNTL
-SNOTEL:547_CO_SNTL
-SNOTEL:970_CO_SNTL
-SNOTEL:554_WY_SNTL
-SNOTEL:555_WY_SNTL
-SNOTEL:556_CO_SNTL
-SNOTEL:559_UT_SNTL
-SNOTEL:565_CO_SNTL
-SNOTEL:566_UT_SNTL
-SNOTEL:1116_UT_SNTL
-SNOTEL:513_UT_SNTL
-SNOTEL:572_UT_SNTL
-SNOTEL:1215_UT_SNTL
-SNOTEL:261_UT_SNTL
-SNOTEL:1047_WY_SNTL
-SNOTEL:586_CO_SNTL
-SNOTEL:589_CO_SNTL
-SNOTEL:1261_UT_SNTL
-SNOTEL:597_WY_SNTL
-SNOTEL:940_CO_SNTL
-SNOTEL:607_CO_SNTL
-SNOTEL:905_CO_SNTL
-SNOTEL:618_CO_SNTL
-SNOTEL:1040_CO_SNTL
-SNOTEL:622_CO_SNTL
-SNOTEL:1014_CO_SNTL
-SNOTEL:629_CO_SNTL
-SNOTEL:632_CO_SNTL
-SNOTEL:643_UT_SNTL
-SNOTEL:1269_UT_SNTL
-SNOTEL:658_CO_SNTL
-SNOTEL:1138_NM_SNTL
-SNOTEL:249_CO_SNTL
-SNOTEL:661_WY_SNTL
-SNOTEL:669_CO_SNTL
-SNOTEL:675_CO_SNTL
-SNOTEL:680_CO_SNTL
-SNOTEL:682_CO_SNTL
-SNOTEL:688_CO_SNTL
-SNOTEL:1133_WY_SNTL
-SNOTEL:701_CO_SNTL
-SNOTEL:709_CO_SNTL
-SNOTEL:713_CO_SNTL
-SNOTEL:714_UT_SNTL
-SNOTEL:717_CO_SNTL
-SNOTEL:720_UT_SNTL
-SNOTEL:732_WY_SNTL
-SNOTEL:737_CO_SNTL
-SNOTEL:739_CO_SNTL
-SNOTEL:742_UT_SNTL
-SNOTEL:1060_CO_SNTL
-SNOTEL:762_CO_SNTL
-SNOTEL:765_WY_SNTL
-SNOTEL:1117_UT_SNTL
-SNOTEL:779_WY_SNTL
-SNOTEL:780_CO_SNTL
-SNOTEL:790_UT_SNTL
-SNOTEL:793_CO_SNTL
-SNOTEL:795_UT_SNTL
-SNOTEL:797_CO_SNTL
-SNOTEL:802_CO_SNTL
-SNOTEL:1249_UT_SNTL
-SNOTEL:1097_UT_SNTL
-SNOTEL:827_CO_SNTL
-SNOTEL:831_WY_SNTL
-SNOTEL:833_UT_SNTL
-SNOTEL:1227_UT_SNTL
-SNOTEL:840_CO_SNTL
-SNOTEL:1141_CO_SNTL
-SNOTEL:842_CO_SNTL
-SNOTEL:843_CO_SNTL
-SNOTEL:250_CO_SNTL
-SNOTEL:1188_CO_SNTL
-SNOTEL:1160_CO_SNTL
-SNOTEL:859_WY_SNTL
-SNOTEL:864_UT_SNTL
-SNOTEL:869_CO_SNTL
-SNOTEL:1228_UT_SNTL
 </pre></div>
 </div>
 </div>
@@ -967,7 +828,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">prism_data_dir</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="c1"># print(filename)</span>
     <span class="n">file_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">filename</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">])</span>
     <span class="c1"># load precip file</span>
     <span class="k">if</span> <span class="s1">&#39;_PR_&#39;</span> <span class="ow">in</span> <span class="n">filename</span><span class="p">:</span>
@@ -1005,82 +866,6 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
                 <span class="c1"># prism_temp_ucrb_da = prism_temp_da.sel(lat=slice(xmin,xmax), lon=slice(ymin,ymax))   # spatial sum</span>
                 <span class="n">prism_temp_ucrb_sum</span> <span class="o">+=</span> <span class="n">prism_temp_ucrb_da</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
                 <span class="c1"># prism_temp_ucrb_sum += prism_temp_ucrb_da.sum(dim=[&#39;time&#39;])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PRISM_PR_1981.nc
-PRISM_PR_1982.nc
-PRISM_PR_1983.nc
-PRISM_PR_1984.nc
-PRISM_PR_1985.nc
-PRISM_PR_1986.nc
-PRISM_PR_1987.nc
-PRISM_PR_1988.nc
-PRISM_PR_1989.nc
-PRISM_PR_1990.nc
-PRISM_PR_1991.nc
-PRISM_PR_1992.nc
-PRISM_PR_1993.nc
-PRISM_PR_1994.nc
-PRISM_PR_1995.nc
-PRISM_PR_1996.nc
-PRISM_PR_1997.nc
-PRISM_PR_1998.nc
-PRISM_PR_1999.nc
-PRISM_PR_2000.nc
-PRISM_PR_2001.nc
-PRISM_PR_2002.nc
-PRISM_PR_2003.nc
-PRISM_PR_2004.nc
-PRISM_PR_2005.nc
-PRISM_PR_2006.nc
-PRISM_PR_2007.nc
-PRISM_PR_2008.nc
-PRISM_PR_2009.nc
-PRISM_PR_2010.nc
-PRISM_PR_2011.nc
-PRISM_PR_2012.nc
-PRISM_PR_2013.nc
-PRISM_PR_2014.nc
-PRISM_PR_2015.nc
-PRISM_PR_2016.nc
-PRISM_TEMP_1981.nc
-PRISM_TEMP_1982.nc
-PRISM_TEMP_1983.nc
-PRISM_TEMP_1984.nc
-PRISM_TEMP_1985.nc
-PRISM_TEMP_1986.nc
-PRISM_TEMP_1987.nc
-PRISM_TEMP_1988.nc
-PRISM_TEMP_1989.nc
-PRISM_TEMP_1990.nc
-PRISM_TEMP_1991.nc
-PRISM_TEMP_1992.nc
-PRISM_TEMP_1993.nc
-PRISM_TEMP_1994.nc
-PRISM_TEMP_1995.nc
-PRISM_TEMP_1996.nc
-PRISM_TEMP_1997.nc
-PRISM_TEMP_1998.nc
-PRISM_TEMP_1999.nc
-PRISM_TEMP_2000.nc
-PRISM_TEMP_2001.nc
-PRISM_TEMP_2002.nc
-PRISM_TEMP_2003.nc
-PRISM_TEMP_2004.nc
-PRISM_TEMP_2005.nc
-PRISM_TEMP_2006.nc
-PRISM_TEMP_2007.nc
-PRISM_TEMP_2008.nc
-PRISM_TEMP_2009.nc
-PRISM_TEMP_2010.nc
-PRISM_TEMP_2011.nc
-PRISM_TEMP_2012.nc
-PRISM_TEMP_2013.nc
-PRISM_TEMP_2014.nc
-PRISM_TEMP_2015.nc
-PRISM_TEMP_2016.nc
 </pre></div>
 </div>
 </div>
@@ -1171,10 +956,10 @@ PRISM_TEMP_2016.nc
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;SNOTEL TEMP (degC)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;PRISM PR (mm)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;PRISM TEMP (degC)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;UA SWE Data Sources </span><span class="se">\n</span><span class="s1"> (April 1 SWE, PR, TEMP averaged over years for each location)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+<span class="c1"># plt.suptitle(&#39;UA SWE Data Sources \n (April 1 SWE, PR, TEMP averaged over years for each location)&#39;, fontsize=22)</span>
 <span class="c1"># plt.subplots_adjust(top=0.9)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mf">0.98</span><span class="p">,</span> <span class="n">bottom</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">hspace</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">wspace</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
-<span class="c1"># plt.tight_layout()</span>
+<span class="c1"># plt.subplots_adjust(left = 0.02, top = 0.9, right = 0.98, bottom = 0.05, hspace = 0.1, wspace = 0.1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_dir</span><span class="o">+</span><span class="s1">&#39;ua_swe_input_data.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>

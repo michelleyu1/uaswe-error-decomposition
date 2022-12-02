@@ -109,7 +109,7 @@ Image(filename = "figures/swe_products.png", width=1000, height=1000)
 
 
 # Map of UCRB
-Image(filename = "figures/ucrb.png", width=500, height=500)
+Image(filename = "figures/ucrb.png", width=300, height=500)
 
 
 # ## Data
@@ -120,7 +120,7 @@ Image(filename = "figures/ucrb.png", width=500, height=500)
 
 
 # Plot of SNOTEL and PRISM for the UCRB
-Image(filename = "figures/ua_swe_input_data.png", width=1000, height=1000)
+Image(filename = "figures/ua_swe_input_data.png", width=1000, height=700)
 
 
 # In our error analysis, we also take advantage of the following datasets:
@@ -132,6 +132,7 @@ Image(filename = "figures/ua_swe_input_data.png", width=1000, height=1000)
 
 
 # Plots of PRISM/Gridmet/Livneh and Jennings
+Image(filename = "figures/ua_swe_analysis_data.png", width=1000, height=1000)
 
 
 # ## Methods: UA SWE Reconstruction
@@ -183,7 +184,7 @@ Image(filename = "figures/ua_swe_input_data.png", width=1000, height=1000)
 
 # In words, the UA SWE product estimates SWE by 
 
-# In[8]:
+# In[ ]:
 
 
 # Some plots of reconstrcted UA SWE
@@ -213,7 +214,7 @@ Image(filename = "figures/ua_swe_input_data.png", width=1000, height=1000)
 # |  | Inverse Distance Weighting (IDW) | 
 # |  | Ordinary Kriging with Nonzero Nugget (OK+n) | 
 
-# In[9]:
+# In[ ]:
 
 
 # plots from runs
@@ -247,7 +248,7 @@ Image(filename = "figures/ua_swe_input_data.png", width=1000, height=1000)
 # \end{align}
 # $$
 
-# In[10]:
+# In[ ]:
 
 
 # Point-level ANOVA result
@@ -260,7 +261,7 @@ Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 # 
 # This is illustrated in the figure below. 
 
-# In[11]:
+# In[ ]:
 
 
 # Error decomposition steps plot
@@ -273,7 +274,7 @@ Image(filename = "figures/anova_pt_lvl.png", width=1000, height=1000)
 # $$
 # 
 
-# In[12]:
+# In[ ]:
 
 
 Image(filename = "figures/error_pt_lvl.png", width=1000, height=1000)
